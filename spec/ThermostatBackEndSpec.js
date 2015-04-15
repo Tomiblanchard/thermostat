@@ -1,4 +1,4 @@
-describe('Thermostat', function() {
+describe('Thermostat Back End', function() {
 
   var thermostat;
 

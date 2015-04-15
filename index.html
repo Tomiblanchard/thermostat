@@ -2,14 +2,28 @@
 <html>
 
   <head>
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
 
   <body>
-    <h1 id="temperature"></h1>
-    <input type="button" value="&#8593;">
-    <input type="button" value="&#8595;" onclick="refreshTemperature()">
-    <p>Power saving mode:</p>
-    <input type="checkbox" name="powerSave" value="Power saving mode on">
+    <div id="controls">
+      <h1 id="temperature"></h1>
+      <input type="button" value="&#8593;" onclick="incrementUp()">
+      <input type="button" value="&#8595;" onclick="incrementDown()">
+      <p>Power saving mode:</p>
+      <input id="powersave" type="checkbox" value="Power saving mode on" onchange="switchPowerSave()" checked>
+    </div>
+
+    <div id='APITempContainer'>
+      The weather in London is:
+      <div id="APITemperature"></div>
+    </div>
+
+    <div class="container">
+	     <div class="sunny"></div>
+     </div>
+
     <script src="./src/Thermostat.js"></script>
     <script src="./src/Interface.js"></script>
   </body>

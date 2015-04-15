@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+    radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+    radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+  background-color:#b03;
+  background-size:100px 100px;
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
+  color: #41082E;
+}
+
+#temperature {
+  margin: 0;
+}
+
+#APITempContainer {
+  text-align:center;
+}
+
+#controls {
+  background-color: rgb(236,147,147);
+  border-bottom-right-radius: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+/* SUNNY */
+.sunny {
+	animation: sunny 15s linear infinite;
+	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+	height: 140px;
+	width: 20px;
+	margin-left: -15px;
+	position: absolute;
+	left: 90px;
+	top: 20px;
+}
+.sunny:before {
+	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+	content: '';
+	height: 140px;
+	width: 20px;
+	opacity: 1;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	transform: rotate(90deg);
+}
+.sunny:after {
+	background: #FFEE44;
+	border-radius: 50%;
+	box-shadow: rgba(255,255,0,0.2) 0 0 0 15px;
+	content: '';
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: -30px;
+	top: 30px;
+}
+
+@keyframes sunny {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+
+.container {
+	background: linear-gradient(left, #00BBFF, #00BBFF 14.3%, #2EB5E5 14.3%, #2EB5E5 28.6%, #E6E6E6 28.6%, #E6E6E6 42.9%, #F3D166 42.9%, #F3D166 57.2%, #222233 57.2%, #222233 71.5%, #444444 71.5%, #444444 85.8%, #85DB8C 85.8%);
+	transform: scale(.9);
+	width: 1200px;
+	position: absolute;
+	height: 210px;
+	left: 50%;
+	top: 50%;
+	margin: -65px -600px;
+}
